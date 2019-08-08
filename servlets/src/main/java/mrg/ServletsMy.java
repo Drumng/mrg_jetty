@@ -11,9 +11,14 @@ public final class ServletsMy {
     public static void main(@NotNull String[] args) throws Exception {
         final Server server = new DefaultServer().build(3466);
 
-        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);
+        ServletContextHandler context = new ServletContextHandler(
+                ServletContextHandler.NO_SESSIONS
+        );
         context.setContextPath("/*");
-        context.addServlet(new ServletHolder("default", new MyServlet(new ContentGenerator())), "/*");
+        context.addServlet(new ServletHolder("default",
+                new MyServlet(new ContentGenerator()))
+                , "/*"
+        );
         server.setHandler(context);
 
         server.start();

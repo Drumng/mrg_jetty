@@ -17,9 +17,15 @@ public final class SslConnectors {
         sslContextFactory.setKeyStoreResource(Resource.newClassPathResource("keystore"));
         sslContextFactory.setKeyStorePassword("qwerty");
 
-        final SslConnectionFactory httpConnectionFactory = new SslConnectionFactory(sslContextFactory, HttpVersion.HTTP_1_1.asString());
+        final SslConnectionFactory httpConnectionFactory = new SslConnectionFactory(
+                sslContextFactory,
+                HttpVersion.HTTP_1_1.asString()
+        );
 
-        final ServerConnector serverConnector = new ServerConnector(server, httpConnectionFactory, new HttpConnectionFactory(httpConfig));
+        final ServerConnector serverConnector = new ServerConnector(server,
+                httpConnectionFactory,
+                new HttpConnectionFactory(httpConfig)
+        );
 
         serverConnector.setHost("localhost");
         serverConnector.setPort(3466);

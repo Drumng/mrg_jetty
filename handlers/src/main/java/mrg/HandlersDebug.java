@@ -18,7 +18,11 @@ public final class HandlersDebug {
 
         final ContextHandler contextHandler = new ContextHandler();
         contextHandler.setContextPath("/*");
-        final RolloverFileOutputStream outputStream = new RolloverFileOutputStream("log/yyyy_mm_dd.request.log", true, 10);
+        final RolloverFileOutputStream outputStream = new RolloverFileOutputStream(
+                "log/yyyy_mm_dd.request.log",
+                true,
+                10
+        );
         final DebugListener listener = new DebugListener(outputStream, false, true, true);
         contextHandler.addEventListener(listener);
 

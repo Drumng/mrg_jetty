@@ -15,7 +15,8 @@ public final class ServletsProxy {
         ConnectHandler proxy = new ConnectHandler();
         server.setHandler(proxy);
 
-        ServletContextHandler context = new ServletContextHandler(proxy, "/*", ServletContextHandler.NO_SESSIONS);
+        ServletContextHandler context = new ServletContextHandler(proxy, "/*",
+                ServletContextHandler.NO_SESSIONS);
         ServletHolder proxyServlet = new ServletHolder(ProxyServlet.Transparent.class);
         proxyServlet.setInitParameter("proxyTo", "http://localhost:3466/");
         proxyServlet.setInitParameter("prefix", "/");

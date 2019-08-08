@@ -27,10 +27,12 @@ public final class FiltersHeader {
 
         final HeaderFilter filter = new HeaderFilter();
         final FilterHolder filterHolder = new FilterHolder(filter);
-        filterHolder.setInitParameter("headerConfig", "set X-Frame-Options: DENY,\n" +
+        filterHolder.setInitParameter("headerConfig",
+                "set X-Frame-Options: DENY,\n" +
                 "      \"add Cache-Control: no-cache, no-store, must-revalidate\",\n" +
                 "      setDate Expires: 31540000000,\n" +
-                "      addDate Date: 0");
+                "      addDate Date: 0"
+        );
         context.addFilter(filterHolder, "/*", EnumSet.of(DispatcherType.REQUEST));
 
         server.setHandler(context);
