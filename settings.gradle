@@ -1,0 +1,10 @@
+rootProject.name = 'mrg_jetty'
+include 'connectors'
+include 'handlers'
+include 'servlets'
+include 'filters'
+include 'logging'
+include 'login'
+include 'session'
+include 'client'
+

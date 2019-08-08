@@ -1,0 +1,26 @@
+o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} - STARTING
++= DefaultHandler@7ff2a664{STARTED} - STARTED
++> No ClassLoader
++> eventListeners o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=3
+|  +> DebugListener@2fd66ad3{STOPPED} - STOPPED
+|  +> org.eclipse.jetty.server.DebugListener$2@525b461a
+|  +> org.eclipse.jetty.server.DebugListener$3@58c1c010
++> handler attributes o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=1
+|  +> org.eclipse.jetty.server.Executor=QueuedThreadPool[qtp1206883981]@47ef968d{STARTED,8<=8<=200,i=8,r=12,q=0}[ReservedThreadExecutor@61d47554{s=0/12,p=0}]
++> context attributes o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=1
+|  +> __RDebugListener@2fd66ad3=@70b0b186
++> initparams o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=0
+key: +- bean, += managed, +~ unmanaged, +? auto, +: iterable, +] array, +@ map, +> undefined
+o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} - STARTING
++= ResourceHandler@4d49af10{STARTED} - STARTED
++> No ClassLoader
++> eventListeners o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=3
+|  +> DebugListener@2fd66ad3{STOPPED} - STOPPED
+|  +> org.eclipse.jetty.server.DebugListener$2@279ad2e3
+|  +> org.eclipse.jetty.server.DebugListener$3@58134517
++> handler attributes o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=1
+|  +> org.eclipse.jetty.server.Executor=QueuedThreadPool[qtp1206883981]@47ef968d{STARTED,8<=8<=200,i=8,r=12,q=0}[ReservedThreadExecutor@4461c7e3{s=0/12,p=0}]
++> context attributes o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=1
+|  +> __RDebugListener@2fd66ad3=@3f200884
++> initparams o.e.j.s.h.ContextHandler@1fc2b765{/,null,STARTING} size=0
+key: +- bean, += managed, +~ unmanaged, +? auto, +: iterable, +] array, +@ map, +> undefined

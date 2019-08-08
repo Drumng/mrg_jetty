@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.jetbrains', name: 'annotations', version: '17.0.0'
+
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.19.v20190610'
+
+    compile group: 'io.prometheus', name: 'simpleclient_jetty', version: '0.6.0'
+}
