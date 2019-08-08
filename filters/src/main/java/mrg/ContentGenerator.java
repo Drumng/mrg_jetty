@@ -11,7 +11,7 @@ public final class ContentGenerator {
         return  "<!DOCTYPE html>" +
                 "<html>" +
                 "<head><title>Example</title></head>" +
-                "<body><p>" + "Current time " + Date.from(Instant.now()) + "</p></body>" +
+                "<body><h1>" + "Current time " + Date.from(Instant.now()) + "</h1></body>" +
                 "</html>";
     }
 }
