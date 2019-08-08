@@ -1,10 +1,8 @@
 package mrg;
 
 import io.prometheus.client.jetty.JettyStatisticsCollector;
-import org.eclipse.jetty.io.ConnectionStatistics;
-import org.eclipse.jetty.server.*;
+import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandler;
-import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.StatisticsHandler;
 import org.jetbrains.annotations.NotNull;
 
@@ -12,14 +10,7 @@ import org.jetbrains.annotations.NotNull;
 public final class HandlersStatistics {
 
     public static void main(@NotNull String[] args) throws Exception {
-        final Server server = new Server();
-        final HttpConfiguration httpConfig = new HttpConfiguration();
-        final HttpConnectionFactory httpConnectionFactory = new HttpConnectionFactory(httpConfig);
-        final ServerConnector serverConnector = new ServerConnector(server, httpConnectionFactory);
-        serverConnector.setHost("localhost");
-        serverConnector.setPort(3466);
-        serverConnector.addBean(new ConnectionStatistics());
-        server.setConnectors(new Connector[]{serverConnector});
+        final Server server = new DefaultServer().build(3466);
 
         final ContextHandler contextHandler = new ContextHandler();
         contextHandler.setContextPath("/*");

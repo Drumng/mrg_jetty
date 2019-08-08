@@ -7,4 +7,5 @@ include 'logging'
 include 'login'
 include 'session'
 include 'client'
+include 'core'
 

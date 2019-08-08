@@ -3,7 +3,7 @@ package mrg;
 import org.eclipse.jetty.security.ConstraintSecurityHandler;
 import org.eclipse.jetty.security.JDBCLoginService;
 import org.eclipse.jetty.security.LoginService;
-import org.eclipse.jetty.server.*;
+import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -16,13 +16,7 @@ import java.net.URL;
 public final class LoginJDBC {
 
     public static void main(@NotNull String[] args) throws Exception {
-        final Server server = new Server();
-        final HttpConfiguration httpConfig = new HttpConfiguration();
-        final HttpConnectionFactory httpConnectionFactory = new HttpConnectionFactory(httpConfig);
-        final ServerConnector serverConnector = new ServerConnector(server, httpConnectionFactory);
-        serverConnector.setHost("localhost");
-        serverConnector.setPort(3466);
-        server.setConnectors(new Connector[]{serverConnector});
+        final Server server = new DefaultServer().build(3466);
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);
         context.setContextPath("/");
